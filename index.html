@@ -1,4 +1,4 @@
-<!-- 부트스트랩 시작 타이틀 시작 -->
+<!-- 필수! 부트스트랩 시작 타이틀 시작 -->
 <!doctype html>
 <html lang="en">
 
@@ -13,17 +13,20 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <title>부트스트랩 연습하기</title>
+    <title>배유정 | 부트스트랩 연습하기!!</title>
     <!-- 부트스트랩 시작 타이틀 끝 -->
     <style>
+        /* 구글 폰트 임포트 */
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
         * {
             font-family: 'Gowun Dodum', sans-serif;
         }
 
+        /* CSS부분 */
+
         .mytitle {
-            /* 이미지 넣기 세트(필요할때마다 복붙해서 쓰면 된다!! */
+            /* 이미지 넣기 3줄 세트(필요할때마다 복붙해서 쓰면 된다!!) */
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
             background-position: center;
             background-size: cover;
@@ -33,8 +36,7 @@
             margin: 30px auto 0px auto;
 
             /* text-align: center; */
-            /* 위에꺼 말고 div의 내용물을 정렬해주는 아래 4줄짜리 세트를 사용해도 된다.
-            이걸 쓰게 되면 padding을 사용할 필요가 없다!!! */
+            /* 위에꺼 말고 div의 내용물을 정렬해주는 아래 4줄짜리 세트를 복붙해서 사용하는게 더 편하다. 이걸 쓰면 padding을 사용할 필요가 없다!!! */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,6 +44,7 @@
             /* 가로로 하고 싶으면 column 대신 row */
         }
 
+        /* 특정 div 안의 버튼에 css값을 주고 싶을 때 부등호를 이용 */
         .mytitle>button {
             width: 250px;
             height: 50px;
@@ -82,17 +85,16 @@
             justify-content: center;
         }
 
-        .labelbutton > button{
+        .labelbutton>button {
             margin-right: 5px;
             margin-left: 5px;
         }
-
     </style>
 </head>
 
 <body>
     <div class="mytitle">
-        <h1> 내 생애 최고의 영화들</h1>
+        <h1> 내 생애 최고의 영화들!!</h1>
         <button>영화 기록하기</button>
     </div>
     <div class="floatinglabel">
@@ -100,13 +102,26 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화 URL</label>
         </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>--선택하기--</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                 style="height: 100px"></textarea>
             <label for="floatingTextarea2">코멘트</label>
         </div>
         <div class="labelbutton">
-            <button type="button" class="btn btn-dark">기록하기</button><button type="button" class="btn btn-outline-dark">닫기</button>
+            <button type="button" class="btn btn-dark">기록하기</button><button type="button"
+                class="btn btn-outline-dark">닫기</button>
         </div>
     </div>
     <div class="mycards">
