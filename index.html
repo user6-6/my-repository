@@ -1,0 +1,166 @@
+<!-- 부트스트랩 시작 타이틀 시작 -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <!-- 부트스트랩 시작 타이틀 끝 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            /* 이미지 넣기 세트(필요할때마다 복붙해서 쓰면 된다!! */
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+            height: 250px;
+            margin: 30px auto 0px auto;
+
+            /* text-align: center; */
+            /* 위에꺼 말고 div의 내용물을 정렬해주는 아래 4줄짜리 세트를 사용해도 된다.
+            이걸 쓰게 되면 padding을 사용할 필요가 없다!!! */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* 가로로 하고 싶으면 column 대신 row */
+        }
+
+        .mytitle>button {
+            width: 250px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .mycards {
+            width: relative;
+            margin: 30px 30px 30px 30px;
+        }
+
+        .mycomment {
+            color: lightgrey;
+        }
+
+        .floatinglabel {
+            background-color: #fff;
+            width: 500px;
+            padding: 20px 30px 20px 30px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .labelbutton {
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .labelbutton > button{
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1> 내 생애 최고의 영화들</h1>
+        <button>영화 기록하기</button>
+    </div>
+    <div class="floatinglabel">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">영화 URL</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">코멘트</label>
+        </div>
+        <div class="labelbutton">
+            <button type="button" class="btn btn-dark">기록하기</button><button type="button" class="btn btn-outline-dark">닫기</button>
+        </div>
+    </div>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="포스터이미지">
+                    <div class="card-body">
+                        <h5 class="card-title">제목!</h5>
+                        <p class="card-text">영화 시놉시스 소개!!</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">넘넘 재밌게 봤다~</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="포스터이미지">
+                    <div class="card-body">
+                        <h5 class="card-title">제목!</h5>
+                        <p class="card-text">영화 시놉시스 소개!!</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">넘넘 재밌게 봤다~</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="포스터이미지">
+                    <div class="card-body">
+                        <h5 class="card-title">제목!</h5>
+                        <p class="card-text">영화 시놉시스 소개!!</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">넘넘 재밌게 봤다~</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="포스터이미지">
+                    <div class="card-body">
+                        <h5 class="card-title">제목!</h5>
+                        <p class="card-text">영화 시놉시스 소개!!</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">넘넘 재밌게 봤다~</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
